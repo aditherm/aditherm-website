@@ -15,9 +15,10 @@ const TopCTA = ({ onContactClick }) => {
           </div>
 
           {/* Right Content */}
-          <div className="flex flex-col md:flex-row items-center gap-8">
+          {/* Right Content */}
+          <div className="flex flex-col md:flex-row items-center md:items-center text-center md:text-left gap-8">
             {/* Call */}
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col md:flex-row items-center gap-3">
               <FaPhoneAlt className="text-[#FF5400] text-xl" />
               <div>
                 <p className="text-sm text-gray-300">Call Us</p>
@@ -26,7 +27,7 @@ const TopCTA = ({ onContactClick }) => {
             </div>
 
             {/* Email */}
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col md:flex-row items-center gap-3">
               <MdEmail className="text-[#FF5400] text-xl" />
               <div>
                 <p className="text-sm text-gray-300">Email Us</p>
@@ -38,7 +39,7 @@ const TopCTA = ({ onContactClick }) => {
             {/* Button */}
             <button
               onClick={onContactClick}
-              className="bg-[#FF5400] hover:bg-orange-700 px-3 py-1 font-bold rounded-md shadow-md hover:shadow-lg transition"
+              className="bg-[#FF5400] hover:bg-orange-700 px-4 py-2 font-bold rounded-md shadow-md hover:shadow-lg transition"
             >
               Contact Us
             </button>

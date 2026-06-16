@@ -59,7 +59,7 @@ const Services = () => {
         "Comprehensive range of panel instruments for effective monitoring, control, and data recording in industrial processes.",
       pdf: null,
       items: [
-        { name: "Panel Indicators", pdf: pressurePDF },
+        { name: "Panel Indicators" },
         { name: "On Off & PID Controllers" },
         { name: "Signal Conditioners" },
         { name: "Convertors" },
@@ -177,7 +177,7 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="mt-2 text-sm text-gray-200">
+          <div className="mt-6 text-sm text-gray-200">
             Home <span className="text-orange-500">{">"}</span>{" "}
             <span className="text-orange-500">Services</span>
           </div>
@@ -201,7 +201,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`${service.bg} rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row mt-6 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]`}
+              className={`${service.bg} rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row mt-6 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] active:shadow-lg`}
             >
               {/* LEFT IMAGE */}
               {!service.reverse && (

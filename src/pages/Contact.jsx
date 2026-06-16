@@ -69,7 +69,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="mb-1 text-sm text-gray-200">
+          <div className="mb-1 mt-6 text-sm text-gray-200">
             Home <span className="text-orange-500">{">"}</span>{" "}
             <span className="text-orange-500">Contact</span>
           </div>

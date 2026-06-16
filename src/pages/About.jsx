@@ -36,7 +36,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="mt-2 text-sm text-gray-200">
+          <div className="mt-6 text-sm text-gray-200">
             Home <span className="text-orange-500">{">"}</span>{" "}
             <span className="text-orange-500">About Us</span>
           </div>
