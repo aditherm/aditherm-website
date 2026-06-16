@@ -1,99 +1,8 @@
-// import logo from "../assets/optimized/logo.jpg";
-// import { NavLink } from "react-router-dom";
-// import { useEffect, useState } from "react";
-
-// const Navbar = () => {
-//   const [scrolled, setScrolled] = useState(false);
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       if (window.scrollY > 50) {
-//         setScrolled(true);
-//       } else {
-//         setScrolled(false);
-//       }
-//     };
-
-//     window.addEventListener("scroll", handleScroll);
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, []);
-
-//   return (
-//     <div
-//       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-//         scrolled ? "bg-white shadow-sm" : "bg-white"
-//       }`}
-//     >
-//       <div
-//         className={`max-w-7xl mx-auto flex justify-between items-center px-4 transition-all duration-300 ${
-//           scrolled ? "py-2" : "py-4"
-//         }`}
-//       >
-
-//         <div>
-//           <img
-//             src={logo}
-//             alt="logo"
-//             className={`transition-all duration-300 ${
-//               scrolled ? "h-12" : "h-16"
-//             }`}
-//           />
-//         </div>
-
-//         <div className="hidden md:flex items-center gap-8 text-gray-700 text-base font-semibold">
-//           <NavLink
-//             to="/"
-//             className={({ isActive }) =>
-//               isActive ? "text-orange-500" : "hover:text-orange-500"
-//             }
-//           >
-//             Home
-//           </NavLink>
-
-//           <NavLink
-//             to="/about"
-//             className={({ isActive }) =>
-//               isActive ? "text-orange-500" : "hover:text-orange-500"
-//             }
-//           >
-//             About Us
-//           </NavLink>
-
-//           <NavLink
-//             to="/services"
-//             className={({ isActive }) =>
-//               isActive ? "text-orange-500" : "hover:text-orange-500"
-//             }
-//           >
-//             Services
-//           </NavLink>
-
-//           <NavLink
-//             to="/industries"
-//             className={({ isActive }) =>
-//               isActive ? "text-orange-500" : "hover:text-orange-500"
-//             }
-//           >
-//             Industries
-//           </NavLink>
-
-//           <NavLink to="/contact">
-//             <button className="bg-orange-500 text-white px-3 py-1 rounded-md hover:bg-orange-600 transition">
-//               Contact
-//             </button>
-//           </NavLink>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Navbar;
-
 import logo from "../assets/optimized/logo.jpg";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -120,13 +29,15 @@ const Navbar = () => {
         }`}
       >
         {/* Logo */}
-        <img
-          src={logo}
-          alt="logo"
-          className={`transition-all duration-300 ${
-            scrolled ? "h-12" : "h-16"
-          }`}
-        />
+        <Link to="/">
+          <img
+            src={logo}
+            alt="logo"
+            className={`cursor-pointer transition-all duration-300 ${
+              scrolled ? "h-12" : "h-16"
+            }`}
+          />
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-gray-700 text-base font-semibold">

@@ -12,7 +12,6 @@ const Home = () => {
   const navigate = useNavigate();
   return (
     <div className="min-h-screen">
-      {/* <Navbar /> */}
       <Hero />
       <AboutSection />
       <ServicesSection />

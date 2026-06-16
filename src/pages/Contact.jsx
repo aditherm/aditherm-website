@@ -43,7 +43,6 @@ const Contact = () => {
   };
   return (
     <div>
-      {/* <Navbar /> */}
       {/* HERO SECTION */}
       <div className="bg-[#002853] pt-12 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 py-4 md:py-5 relative z-10">
