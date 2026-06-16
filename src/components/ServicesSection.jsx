@@ -16,7 +16,7 @@ const ServicesSection = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-8 text-center">
         {/* Section heading */}
         <p className="text-orange-500 font-semibold text-sm tracking-wide">
-          OUR SERVICES
+          SOLUTION OFFERINGS
         </p>
 
         <h2 className="text-2xl md:text-3xl font-bold mt-2">
@@ -87,10 +87,10 @@ const ServicesSection = () => {
         {/* CTA */}
         <div className="mt-8 flex justify-center">
           <button
-            onClick={() => navigate("/services")}
+            onClick={() => navigate("/offerings")}
             className="text-orange-500 font-medium text-sm hover:underline"
           >
-            View All Services →
+            View All Offerings →
           </button>
         </div>
       </div>

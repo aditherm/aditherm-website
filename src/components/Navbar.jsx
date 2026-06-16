@@ -58,12 +58,12 @@ const Navbar = () => {
             About Us
           </NavLink>
           <NavLink
-            to="/services"
+            to="/offerings"
             className={({ isActive }) =>
               isActive ? "text-orange-500" : "hover:text-orange-500"
             }
           >
-            Services
+            Solution Offerings
           </NavLink>
           <NavLink
             to="/industries"
@@ -111,11 +111,11 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink
-            to="/services"
+            to="/offerings"
             onClick={() => setMenuOpen(false)}
             className="block py-2 border-b"
           >
-            Services
+            Solution Offerings
           </NavLink>
 
           <NavLink

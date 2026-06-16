@@ -45,8 +45,8 @@ const CTASection = ({ onContactClick }) => {
                   </Link>
                 </li>
                 <li className="hover:text-orange-500 cursor-pointer">
-                  <Link to="/services" className="hover:text-orange-500">
-                    Services
+                  <Link to="/offerings" className="hover:text-orange-500">
+                    Solution Offerings
                   </Link>
                 </li>
                 <li className="hover:text-orange-500 cursor-pointer">
@@ -64,7 +64,7 @@ const CTASection = ({ onContactClick }) => {
 
             {/* Services */}
             <div className="md:border-r md:border-gray-700/50 md:px-6">
-              <h3 className="font-semibold mb-4">Our Services</h3>
+              <h3 className="font-semibold mb-4">Solution Offerings</h3>
               <ul className="space-y-2 text-gray-300 text-sm">
                 <li>Instrumentation</li>
                 <li>Automation Solutions</li>

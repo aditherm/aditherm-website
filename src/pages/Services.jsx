@@ -167,7 +167,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-6 py-4 md:py-5 relative z-10">
           <div className="text-center">
             <h1 className="text-2xl md:text-3xl font-bold">
-              Our <span className="text-orange-500">Services</span>
+              Solution <span className="text-orange-500">Offerings</span>
             </h1>
 
             <p className="text-gray-200 mt-2 max-w-lg mx-auto text-xs md:text-sm">
@@ -178,7 +178,7 @@ const Services = () => {
 
           <div className="mt-6 text-sm text-gray-200">
             Home <span className="text-orange-500">{">"}</span>{" "}
-            <span className="text-orange-500">Services</span>
+            <span className="text-orange-500">Offerings</span>
           </div>
         </div>
 

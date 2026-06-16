@@ -39,9 +39,9 @@ const Hero = () => {
 
             <button
               className="border border-white px-5 py-2 rounded-md hover:bg-white hover:text-black text-sm"
-              onClick={() => navigate("/services")}
+              onClick={() => navigate("/offerings")}
             >
-              Our services →
+              Solution Offerings →
             </button>
           </div>
         </div>
