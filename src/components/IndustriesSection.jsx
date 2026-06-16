@@ -105,10 +105,17 @@ const IndustriesSection = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full bg-gray-100 pt-10 pb-16 md:pt-12 md:pb-20">
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
+    <div className="w-full bg-white pt-8 pb-16 md:pt-10 md:pb-20">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 text-center">
+        {/* <p className="text-orange-500 font-semibold text-sm tracking-wide">
+          INDUSTRIES WE SERVE
+        </p>
+
+        <h2 className="text-2xl md:text-3xl font-bold mt-2">
+          Serving Diverse <span className="text-orange-500">Industries</span>
+        </h2> */}
         {/* ORANGE CARD */}
-        <div className="bg-gradient-to-r from-[#FF5200] via-[#FF6A1A] to-[#E64A00] rounded-2xl shadow-md py-10 px-6 md:px-8">
+        <div className="bg-gradient-to-r from-[#FF5200] via-[#FF6A1A] to-[#E64A00] rounded-2xl shadow-md py-8 px-6 md:px-8 mt-12">
           {/* Heading */}
           <div className="text-center">
             <p className="text-white tracking-wide font-semibold text-xs sm:text-sm">
@@ -121,7 +128,7 @@ const IndustriesSection = () => {
           </div>
 
           {/* Industries Grid */}
-          <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-6 mt-12">
             {industries.map((item, index) => (
               <div
                 key={index}
