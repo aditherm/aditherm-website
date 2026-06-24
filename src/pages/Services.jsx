@@ -16,7 +16,8 @@ import gasImg from "../assets/optimized/gas.webp";
 import weldingImg from "../assets/optimized/welding.webp";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import temperaturePDF from "../pdfs/SmartLine-Temperature-Transmitter-Brochure-2021.pdf";
 import pressurePDF from "../pdfs/SmartLine Pressure Transmitter Brochure_R6.pdf";
 import heatTreatmentPDF from "../pdfs/Heat Treatment Product overview.pdf";
@@ -27,9 +28,25 @@ import CTASection from "../components/CTASection";
 
 const Services = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.sectionId) {
+      const section = document.getElementById(location.state.sectionId);
+
+      if (section) {
+        const yOffset = -80; // adjust for navbar
+        const y =
+          section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }
+  }, [location]);
   const services = [
     {
       title: "Instrumentation",
+      id: "instrumentation",
       description:
         "High-precision instrumentation solutions designed for accurate measurement, reliable monitoring, and improved process efficiency across industrial applications.",
       pdf: null,
@@ -55,6 +72,7 @@ const Services = () => {
 
     {
       title: "Panel Instruments",
+      id: "panel-instruments",
       description:
         "Comprehensive range of panel instruments for effective monitoring, control, and data recording in industrial processes.",
       pdf: null,
@@ -78,6 +96,7 @@ const Services = () => {
 
     {
       title: "Heat Treatment & Combustion",
+      id: "heat-treatment-combustion",
       description:
         "Efficient combustion and heat treatment solutions ensuring optimal performance, energy efficiency, and operational safety.",
       pdf: heatTreatmentPDF,
@@ -103,6 +122,7 @@ const Services = () => {
 
     {
       title: "Turnkey Automation Solutions",
+      id: "turnkey-automation-solutions",
       description:
         "End-to-end automation solutions tailored to enhance productivity, control, and efficiency through advanced industrial systems.",
       pdf: null,
@@ -122,6 +142,7 @@ const Services = () => {
 
     {
       title: "Gas Leak & Flame Detection",
+      id: "gas-leak-flame-detection",
       description:
         "Advanced gas and flame detection systems ensuring safety, compliance, and real-time monitoring in critical environments.",
       pdf: null,
@@ -142,6 +163,7 @@ const Services = () => {
 
     {
       title: "Welding Equipment",
+      id: "welding-equipment",
       description:
         "Reliable and high-performance welding solutions for industrial fabrication, maintenance, and precision operations.",
       pdf: null,
@@ -200,6 +222,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
+              id={`${service.id}`}
               className={`${service.bg} rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row mt-6 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] active:shadow-lg`}
             >
               {/* LEFT IMAGE */}

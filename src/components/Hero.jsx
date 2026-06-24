@@ -32,17 +32,17 @@ const Hero = () => {
           <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4">
             <button
               className="bg-orange-500 px-5 py-2 rounded-md hover:bg-orange-600 text-sm"
-              onClick={() => navigate("/contact")}
-            >
-              Contact →
-            </button>
-
-            <button
-              className="border border-white px-5 py-2 rounded-md hover:bg-white hover:text-black text-sm"
               onClick={() => navigate("/offerings")}
             >
               Solution Offerings →
             </button>
+
+            {/* <button
+              className="border border-white px-5 py-2 rounded-md hover:bg-white hover:text-black text-sm"
+              onClick={() => navigate("/offerings")}
+            >
+              Solution Offerings →
+            </button> */}
           </div>
         </div>
 

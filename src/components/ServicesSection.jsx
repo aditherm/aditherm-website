@@ -31,36 +31,47 @@ const ServicesSection = () => {
             {
               icon: <FaThermometerHalf />,
               title: "Instrumentation",
+              sectionId: "instrumentation",
               desc: "Temperature, Pressure, Flow & Level measurement solutions along with valves, actuators and analytical instruments.",
             },
             {
               icon: <FaThLarge />,
               title: "Panel Instruments",
+              sectionId: "panel-instruments",
               desc: "Indicators, PID controllers, signal conditioners, data loggers and power supplies for precise panel monitoring.",
             },
             {
               icon: <FaFire />,
               title: "Heat Treatment & Combustion",
+              sectionId: "heat-treatment-combustion",
               desc: "Industrial burners, flame sensors, gas systems and complete burner control solutions for combustion processes.",
             },
             {
               icon: <FaMicrochip />,
               title: "Automation Solutions",
+              sectionId: "turnkey-automation-solutions",
               desc: "PLC, DCS, HMI & SCADA based modular automation solutions for efficient and scalable control systems.",
             },
             {
               icon: <FaExclamationTriangle />,
               title: "Gas & Flame Detection",
+              sectionId: "gas-leak-flame-detection",
               desc: "Portable and fixed gas detectors, flame detection systems and calibration solutions for industrial safety.",
             },
             {
               icon: <FaTools />,
               title: "Welding Equipment",
+              sectionId: "welding-equipment",
               desc: "Arc, TIG, plasma and submerged welding machines along with gas cutting and industrial welding solutions.",
             },
           ].map((item, index) => (
             <div
               key={index}
+              onClick={() =>
+                navigate("/offerings", {
+                  state: { sectionId: item.sectionId },
+                })
+              }
               className="bg-[#002853] rounded-xl p-5 shadow flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:scale-[1.03]"
             >
               {/* ICON */}
